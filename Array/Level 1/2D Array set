@@ -1,0 +1,67 @@
+// Given a 2-d array of integers having N*N elements, print the transpose of the array.
+
+// Example 1:
+
+// Input : arr[] = {{1,2,3}, {4,5,6}, 
+//                   {7,8,9}} and N = 3
+// Output : 1 4 7 2 5 8 3 6 9
+// Explanation:1 2 3       1 4 7
+//             4 5 6 ----> 2 5 8
+//             7 8 9       3 6 9
+// Transpose of array.
+
+// Example 2:
+
+// Input : arr[ ] = {{1, 2}, {1, 2}} 
+//                     and N = 2 
+// Output :  1 1 2 2
+ 
+
+// Your Task:
+// This is a function problem. The input is already taken care of by the driver code.
+// You only need to complete the function transpose() that takes a two-dimension 
+// array (arr), sizeOfArray (n), and return the transpose of the array. 
+// The driver code takes care of the printing.
+
+
+
+vector<vector<int>> transpose(int a[][M], int n)
+{
+    // Code here
+            vector<vector<int>>b;
+    for(int i=0;i<n;i++)
+    {
+
+        vector<int> temp;
+        for(int j=0;j<n;j++)
+        {
+           temp.push_back (a[ j ][ i ]);//append
+        }
+            b.push_back(temp);
+    }
+    return b;
+}
+
+
+//>>>>>>>>   Explanation.......................
+
+
+// vector<vector<int>> b;: This line declares a 2D vector named "b" to store the transpose of the matrix.
+
+// The code then enters a loop that iterates "n" times, representing the rows of the input matrix.
+
+// Inside the outer loop, a vector named "temp" is declared to store the elements of each row in the transpose.
+
+// Another loop is started, iterating "n" times, representing the columns of the input matrix.
+
+// Within the inner loop, the element at index "a[j][i]" of the input matrix is accessed and 
+//appended to the "temp" vector using the push_back() function.
+
+//This effectively transposes the element from the original matrix to the transposed matrix.
+
+// After the inner loop finishes, the "temp" vector, representing a row in the transpose,
+//is appended to the "b" vector using the push_back() function.
+
+// The outer loop continues until all rows of the input matrix have been processed.
+
+// Finally, the transposed matrix "b" is returned as the result of the function.
