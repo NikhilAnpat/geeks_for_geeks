@@ -1,0 +1,67 @@
+//User function Template for Java
+// Given a string consisting of lowercase english alphabets, reverse only the vowels present in it and print the resulting string.
+
+// Example 1:
+
+// Input:
+// S = "geeksforgeeks"
+// Output: geeksforgeeks
+// Explanation: The vowels are: e, e, o, e, e
+// Reverse of these is also e, e, o, e, e.
+
+// Example 2:
+
+// Input: 
+// S = "practice"
+// Output: prectica
+// Explanation: The vowels are a, i, e
+// Reverse of these is e, i, a.
+ 
+
+// Example 3:
+
+// Input: 
+// S = "bcdfg"
+// Output: bcdfg
+// Explanation: There are no vowels in S.
+
+// Your Task:
+// You don't need to read input or print anything. Your task is to complete the 
+// function modify() which takes the string S as input and returns the resultant string
+// by reversing only the vowels present in S.
+
+
+
+
+
+class Solution
+{
+    String modify (String s)
+    {
+        // your code here
+        
+        
+       
+       String ans="";
+        StringBuilder sb = new StringBuilder(s);
+        int st = 0, n = s.length();
+        
+       for(int i=0;i<n;i++)
+       {
+           if(s.charAt(i)=='a'||s.charAt(i)=='e'||s.charAt(i)=='i'||s.charAt(i)=='o'||s.charAt(i)=='u')
+           {
+               ans+=s.charAt(i);
+           }
+       }
+
+          for(int i=n-1;i>=0;i--)
+       {
+           if(s.charAt(i)=='a'||s.charAt(i)=='e'||s.charAt(i)=='i'||s.charAt(i)=='o'||s.charAt(i)=='u')
+           {
+             sb.setCharAt(i,ans.charAt(st++));
+           }
+       }
+        return sb.toString();
+        
+    }
+}
