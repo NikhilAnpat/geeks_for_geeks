@@ -1,0 +1,75 @@
+
+class Solution {
+    int print2largest(int arr[], int n) {
+        // code here
+        
+        
+        
+
+        int largest = -1;
+        int secLargest = -1;
+        
+        for(int i=0; i<n; i++)
+        {
+            if(arr[i] > largest)
+            {
+                secLargest =largest;
+                largest = arr[i];
+            }
+            else if(arr[i] > secLargest && arr[i] != largest){
+                secLargest = arr[i];
+            }
+        }
+        return secLargest;
+        
+       
+       
+       
+       
+       // 150 test cases solve
+       
+    //     Set<Integer> h = new TreeSet<Integer>();
+    //     for(int i=0;i<arr.length;i++)
+    //     {
+    //         h.add(arr[i]);
+    //     }
+    //     List<Integer> list=new ArrayList<>(h);
+
+        
+    //   int a=list.get(list.size()-2);
+    //     return a;
+
+
+
+
+        // 52 test cases solve
+        
+       //  PriorityQueue<Integer> h = new PriorityQueue<>(Collections.reverseOrder()); 
+        // for(int i=0;i<n;i++)
+        // {
+        //     h.add(arr[i]);
+        // }
+        
+        // int arr1[]= new int[2];
+        // for(int i=0;i<2;i++)
+        // {
+        //     arr1[i]=h.poll();
+        // }
+        
+        
+        // int secondlargest=arr1[1];
+        
+        // return secondlargest;
+        
+        
+
+        
+
+
+        
+        
+        
+        
+        
+    }
+}
