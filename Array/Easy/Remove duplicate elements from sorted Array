@@ -30,10 +30,7 @@
 class Solution {
     int remove_duplicate(int A[],int N)
     {
-            if (N == 0)
-            {
-            return 0;
-            }
+          
         
         int Count = 1;
         
